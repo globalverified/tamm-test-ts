@@ -1,6 +1,5 @@
 import React from 'react';
-// import './styles.css';
-// import MouseHover from "./Components/MouseHover";
+import './style.css';
 
 export default function App() {
   return <div className="App">hello</div>;
