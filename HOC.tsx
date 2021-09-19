@@ -34,21 +34,23 @@ import './style.css';
 export interface WithLoadingProps {
   isHovered: boolean;
 }
+export interface WithLoadingPropsData {
+  data: object;
+}
 
 export default function Hoc<P extends WithLoadingProps>(
-  HocComponent: Component<P>,
-  data
+  HocComponent: React.ComponentType<P>,
+  datas: Readonly<{}>
 ) {
   const [isHovered, setHover] = React.useState(false);
 
-  return class extends Component {
+  return class extends Component<{}, WithLoadingPropsData> {
     constructor(props) {
       super(props);
       this.state = {
-        data: data,
+        data: datas,
       };
     }
-
     render() {
       return (
         <HocComponent
