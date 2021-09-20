@@ -5,7 +5,7 @@ import * as fs from 'fs';
 
 //middleware to check if req has a session
 const checkSession = (req: Request, res: Response, next: NextFunction) => {
-  if (req.session) {
+  if (req.session.token) {
     next();
   } else {
     res.send('Invalid session');
