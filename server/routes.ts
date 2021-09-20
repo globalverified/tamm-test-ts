@@ -3,7 +3,7 @@ let router = express.Router();
 const app = express();
 import * as fs from 'fs';
 
-//middleware to check if req has a session
+//middleware to check if req has a session authorization token
 const checkSession = (req: Request, res: Response, next: NextFunction) => {
   if (req.session.token) {
     next();
