@@ -64,7 +64,7 @@ app.get('/:id', async (req, res) => {
   }
   const data = fs.readFileSync(path);
   const parsedData = JSON.parse(data.toString());
-  return res.send({ parsedData: parsedData, path: path });
+  res.send({ parsedData: parsedData, path: path });
 });
 
 app.listen('3000', () => {
