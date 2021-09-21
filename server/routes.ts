@@ -13,8 +13,6 @@ const checkSession = (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-router.use(checkSession);
-
 app.use(express.static(__dirname + '/public'));
 
 router.route('/bpm/start').get(checkSession, (req: Request, res: Response) => {
