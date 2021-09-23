@@ -19,10 +19,6 @@ export default function Hoc<P extends WithLoadingProps>(
   }
 
   return class extends Component<{}> {
-    constructor(props) {
-      super(props);
-    }
-
     render() {
       return (
         <HocComponent

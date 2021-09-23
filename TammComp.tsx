@@ -1,12 +1,9 @@
 // //here we are using properties of mouse hover from HOC alongwith additional data (isHovered and data)
-
-import React, { useState } from 'react';
+import React from 'react';
 import './style.css';
-import Hoc from './HOC';
 
 export interface WithHOCProps {
   isHovered: boolean;
-  data: Array<any>;
   color: string;
 }
 
@@ -21,6 +18,5 @@ export default function ProjectComponent(props: WithHOCProps) {
     </div>
   );
 }
-
 // Note: component is passed in HOC using App.tsx line:7
 // Used above app.tsx in order to maintain unique code flow
