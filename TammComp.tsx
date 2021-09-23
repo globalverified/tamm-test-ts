@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import './style.css';
+import Hoc from './HOC';
 
 export interface WithHOCProps {
   isHovered: boolean;
@@ -20,3 +21,6 @@ export default function ProjectComponent(props: WithHOCProps) {
     </div>
   );
 }
+
+// Note: component is passed in HOC using App.tsx line:7
+// Used above app.tsx in order to maintain unique code flow
