@@ -22,7 +22,6 @@ export default function Hoc<P extends WithLoadingProps>(
     render() {
       return (
         <HocComponent
-          {...this.props}
           onMouseOver={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
           ishovered={ishovered}
