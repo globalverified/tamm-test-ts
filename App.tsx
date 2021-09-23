@@ -4,21 +4,7 @@ import ProjectComponent from './TammComp';
 import Hoc from './HOC';
 
 export default function App() {
-  const ProjectName = [
-    {
-      id: 1,
-      name: 'TAMM',
-    },
-    {
-      id: 2,
-      name: 'Merck',
-    },
-    {
-      id: 3,
-      name: 'Mercedes',
-    },
-  ];
-  const Users = Hoc(ProjectComponent, ProjectName);
+  const Users = Hoc(ProjectComponent);
 
   return (
     <div className="App">
