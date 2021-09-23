@@ -9,8 +9,8 @@ export default function Hoc<P extends WithLoadingProps>(
   HocComponent: React.ComponentType<P>
 ) {
   const [isHovered, setHover] = React.useState(false);
-  let green: string = '#11e619';
-  let red: string = '#9a0426';
+  const green: string = '#11e619';
+  const red: string = '#9a0426';
   const [colorCode, setColor] = React.useState('#11e6');
 
   function colorChange() {
