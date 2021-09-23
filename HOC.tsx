@@ -31,7 +31,7 @@ export default function Hoc<P extends WithLoadingProps>(
           onMouseLeave={() => setHover(false)}
           isHovered={isHovered}
           onClick={colorChange}
-          style={{ color: colorCode }}
+          color={colorCode}
         />
       );
     }

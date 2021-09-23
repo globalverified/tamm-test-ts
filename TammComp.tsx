@@ -6,14 +6,18 @@ import './style.css';
 export interface WithHOCProps {
   isHovered: boolean;
   data: Array<any>;
+  color: string;
 }
 
 export default function ProjectComponent(props: WithHOCProps) {
   const hoverText: string = props.isHovered ? 'IN' : 'Out';
+  console.log(props);
   return (
     <div>
       <h3>TAMM HOC and Functional component using StackBlitz..</h3>
-      <h2 {...props}>Mouse is Hover {hoverText} to Component.</h2>
+      <h2 {...props} style={{ color: props.color }}>
+        Mouse is Hover {hoverText} to Component.
+      </h2>
     </div>
   );
 }
